@@ -1,5 +1,5 @@
 # WebdriverIO-functional
-# Descrption of repository: Functional repository for web login, filter, cart verification and tests
+Descrption of repository: Functional repository for web login, filter, cart verification and tests
 
 To perform the tests, we will use WebdriverIO with Node.js.
 
