@@ -80,17 +80,17 @@ src
 ```
 where:
 
-**src** : Source folder
+**src** : _Source folder_
 
-**configuration** : contains config file and all the selectors used in this project in various test stories
+**configuration** : _contains config file and all the selectors used in this project in various test stories_
 
-**pages** : all the functions used in this project in various test stories
+**pages** : _all the functions used in this project in various test stories_
 
-**stories** : all the functional tests.
+**stories** : _all the functional tests._
 
-**util** : contains all the general functions.
+**util** : _contains all the general functions._
 
-**What to expect**
+## What to expect
 
 filter.js
 ```
