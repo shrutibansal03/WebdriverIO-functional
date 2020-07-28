@@ -1,0 +1,26 @@
+{
+  "name": "wdio-pom",
+  "version": "1.0.0",
+  "description": "This is POM FrameWork with WebDriver IO",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/.bin/wdio ./wdio.conf.js"
+  },
+  "author": "Shruti Bansal",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/local-runner": "^6.3.4",
+    "@wdio/mocha-framework": "^6.3.0",
+    "@wdio/spec-reporter": "^6.3.0",
+    "@wdio/sync": "^6.3.3",
+    "chai-webdriverio": "^1.0.0",
+    "chromedriver": "^84.0.1",
+    "local-runner": "^0.1.1-alpha",
+    "wdio-chromedriver-service": "^6.0.3",
+    "webdriverio": "^6.3.4"
+  },
+  "dependencies": {
+    "@wdio/cli": "^6.3.4",
+    "chai": "^4.2.0"
+  }
+}
