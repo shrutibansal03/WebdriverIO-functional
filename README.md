@@ -58,10 +58,6 @@ beforeTest: function() {
 		
 	},
   ```
-Folder & File set up
-
-`$ mkdir ./src/stories/**/*.js`
-
 We told WebdriverIO that we've got our tests stored in the spec folder.
 
 For editor, We have used # code Visualbasic tool
