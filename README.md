@@ -54,7 +54,7 @@ beforeTest: function() {
 		
 		global.assert = chai.assert
 		global.should = chai.should
-		global.expect = chai.exp
+		global.expect = chai.expect
 		
 	},
   ```
@@ -109,7 +109,7 @@ This test case will perform the following checks
 2. Click on Account- Login and verify the Login Page Ttitle.
 3. Check Required Field Validation on Username and Password Field.
 ```
-Search&AddtoCart.js
+Search-AddtoCart.js
 ```
 1. Login to HomePage.
 2. Search for a item based on specifications add to Cart.
