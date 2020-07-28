@@ -7,7 +7,7 @@ Step 1: Install WebdriverIO
 
 Before I get to installing WebdriverIO, you need to have a recent version NodeJS and be in an NPM package. If you want to have WebdriverIO integrated into your test suite, then install it locally with:
 
-$ npm install webdriverio --save-dev
+`$ npm install webdriverio --save-dev`
 
 The test runner is called wdio and should be available after the install was successful:
 
