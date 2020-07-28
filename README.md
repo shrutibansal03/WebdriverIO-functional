@@ -11,61 +11,85 @@ Before I get to installing WebdriverIO, you need to have a recent version NodeJS
 
 The test runner is called wdio and should be available after the install was successful:
 
-$ ./node_modules/.bin/wdio --help
+`$ ./node_modules/.bin/wdio --help`
 
 You can also install the package globally on your machine and use the wdio directly from the command line. However it is recommended to install it per project.
-
 NPM package, you can quickly set one up by opening up a command prompt and running:
 
-$ npm init -y
+`$ npm init -y`
 
 So long as you have those two things, you can install WebdriverIO by running the normal NPM command for such things:
 
-$ npm i --save-dev webdriverio
+`$ npm i --save-dev webdriverio`
 
 Now, install the CLI:
 
-$ npm i --save-dev @wdio/cli
+`$ npm i --save-dev @wdio/cli`
 
 Generate Configuration File
-
 To do that, just run the configuration utility:
 
-$ npx wdio config -y
+`$ npx wdio config -y`
 
 The first time you run that command, it will check for a wdio.conf.js file.
-
 Since we haven't created one yet, WebdriverIO is smart enough to figure that out and help us through the process. Here are the answers I chose:
-
+```
 Where do you want to execute your tests? On my local machine
 Which framework do you want to use? mocha
 Do you want to run WebdriverIO commands synchronous or asynchronous? Sync
-Where are your test specs located? ./test/specs/**/*.js
+Where are your test specs located? ./src/stories/**/*.js
 Do you want WebdriverIO to autogenerate some test files? no
 Are you using a compiler? no
 Which reporter do you want to use? spec
 Do you want to add a service to your test setup? chromedriver
 What is the base url? http://www.ctqatest.biz/ecom/
-
+```
+Edit the `wdio.conf.js` and enter the following for chai assertions
+```
+beforeTest: function() {
+		
+		const chai = require('chai')
+		const chaiWebdriver = require('chai-webdriverio').default
+		chai.use(chaiWebdriver(browser))
+		
+		global.assert = chai.assert
+		global.should = chai.should
+		global.expect = chai.exp
+		
+	},
+  ```
 Folder & File set up
 
-$ mkdir .\test\specs
+`$ mkdir ./src/stories/**/*.js`
 
-We told WebdriverIO that we've got our tests stored in the spec folder under test folder.
-create a file called login.js and open it up in your noptepad++ or any editor of your choice.
+We told WebdriverIO that we've got our tests stored in the spec folder.
 
-Start the Testrunner. To do so, just run:
+For editor, We have used # code Visualbasic tool
 
-$ npx wdio wdio.conf.js
+command we use for running the test codes under stories folder:
+
+`$ npx wdio wdio.conf.js`
+
+# Project Folder structure:
+> src
+  > configuration
+  > pages
+  > stories
+  > util
+where:
+src : Source folder
+configuration: contains 2 files 
+  config.js : entered username and password
+  contants.js : contains all the selectors used in this project
 
 we'll set up the following:
-
+```
 describe('Login Page', function () {
   it('should let you log in', function () {
     // our tests will go here
   })
 })
-
+```
 You do need both describe and it, as that's the hierarchy Mocha excepts. The it goes inside the describe block. Inside of the it block we'll put our tests.
 
 We've got WebdriverIO configured and our test file laid out. Let's write our first test.
