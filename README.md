@@ -83,8 +83,11 @@ where:
 **src** : Source folder
 
 **configuration** : contains config file and all the selectors used in this project in various test stories
+
 **pages** : all the functions used in this project in various test stories
+
 **stories** : all the functional tests.
+
 **util** : contains all the general functions.
 
 **What to expect**
